@@ -1,0 +1,44 @@
+Implementation of different optimization algorithms in python using Theano. 
+
+Currently it contains: 
+
+MINRES
+======
+MINRES is written completely as a symbolic graph, resulting in longer 
+compilation time, though possibly faster running time. 
+
+The current code is a translation of the matlab code from
+http://www.stanford.edu/group/SOL/software.html into python using numpy and
+Theano. For a deeper understanding of the algorithm check 
+  http://www.stanford.edu/group/SOL/software.html
+
+
+Disclaimer: the implementation is meant for Theano users that might want to 
+fit this algorithm as a building block of some more complicated graph. 
+While Theano helps when computing the product ``Ax`` is expensive (by 
+automatically optimizing that expression and translate it into C code or 
+cuda code) it does make the implementation much less readable than a 
+pure python/numpy implementation.
+
+
+MINRES-QLP
+==========
+MINRES-QLP is written as an op, where all the heavy computation are 
+done through Theano, while some simple arithmetic and logic are done 
+in python/numpy. 
+
+The current code is a translation of the matlab code from
+http://www.stanford.edu/group/SOL/software.html into python using numpy and
+Theano. For a deeper understanding of the algorithm check 
+  http://www.stanford.edu/group/SOL/software.html
+
+
+Disclaimer: the implementation is meant for Theano users that might want to 
+fit this algorithm as a building block of some more complicated graph. 
+While Theano helps when computing the product ``Ax`` is expensive (by 
+automatically optimizing that expression and translate it into C code or 
+cuda code) it does make the implementation much less readable than a 
+pure python/numpy implementation.
+
+Contact: Razvan Pascanu (r.pascanu@gmail...)
+License: 3-clause BSD

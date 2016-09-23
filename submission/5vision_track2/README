@@ -1,0 +1,19 @@
+Team name: 5vision
+
+System: Ubuntu
+Language: Python2
+
+##################################################################
+# Dependencies #
+
+- Theano version 0.9.0dev1.dev-RELEASE
+- Lasagne version 0.2.dev1
+
+
+##################################################################
+# Additional Information #
+
+- Agent was trained on freedoom2.wad with skip one frame
+- Policy network based on GRU and the hidden state should be reset
+- Total number of actions is equal to 12
+- Initial value of the previous action is equal to 5 (NOP action)

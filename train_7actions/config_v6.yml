@@ -1,0 +1,43 @@
+name: 'v6'
+
+width: 64
+height: 48
+channels: 1
+actions: 7
+
+history: 50
+
+# Number of policy parameters:
+# 108432 > 108176(27) = 50304(3) + 57872(24)
+
+# Number of baseline parameters:
+# 108042 > 107786(27) = 50304(3) + 57482(24)
+
+cnn_f1: 32
+cnn_f2: 32
+cnn_f3: 64
+
+att_units: 48
+gru_units: 64
+
+rl_noise: false
+rl_split: true
+
+batch_size: 128
+
+
+# Pretrain track1
+# =========================================================
+# Epoch 495 lr 0.00002 updates 732 time 54 loss 0.390/0.426
+# Epoch 496 lr 0.00002 updates 726 time 53 loss 0.390/0.426
+# Epoch 497 lr 0.00001 updates 730 time 53 loss 0.389/0.426
+# Epoch 498 lr 0.00001 updates 728 time 53 loss 0.388/0.426
+# Epoch 499 lr 0.00001 updates 732 time 54 loss 0.391/0.426
+
+# Pretrain track2
+# ===========================================================
+# Epoch 495 lr 0.00002 updates 1048 time 275 loss 0.370/0.264
+# Epoch 496 lr 0.00002 updates 1046 time 103 loss 0.371/0.264
+# Epoch 497 lr 0.00001 updates 1052 time 276 loss 0.371/0.264
+# Epoch 498 lr 0.00001 updates 1046 time 103 loss 0.371/0.264
+# Epoch 499 lr 0.00001 updates 1044 time 103 loss 0.372/0.263
